@@ -62,8 +62,12 @@ namespace Chat04.Model
 
                 foreach (ChatMessage ms in newMessages)
                 {
-                    if(ms.reciever==0)
-                    myForm.MainChatWindow.Items.Add(ms);
+                    if (ms.reciever == 0)
+                    {
+                        myForm.MainChatWindow.Items.Add(ms);
+                        myForm.MainChatWindow.SelectedIndex = (myForm.MainChatWindow.Items.Count - 1);
+                        myForm.MainChatWindow.ClearSelected();
+                    }
                     else
                     {
                         PrivateMessageAdministrator(ms);
