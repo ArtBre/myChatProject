@@ -24,7 +24,7 @@ namespace Chat04
         public Form1()
         {
             InitializeComponent();
-            timerForGetData.Interval = 1000;
+            timerForGetData.Interval = 250;
             timerForGetData.Tick += new EventHandler(GetDataFromServer);
 
             timerForWakeUpKeeper.Interval = 3000;
